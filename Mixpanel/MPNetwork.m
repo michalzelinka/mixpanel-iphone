@@ -21,7 +21,8 @@ static const NSUInteger kBatchSize = 50;
 
 @implementation MPNetwork
 
-+ (NSURLSession *)sharedURLSession {
++ (NSURLSession *)sharedURLSession
+{
     static NSURLSession *sharedSession = nil;
     @synchronized(self) {
         if (sharedSession == nil) {
@@ -33,7 +34,8 @@ static const NSUInteger kBatchSize = 50;
     return sharedSession;
 }
 
-- (instancetype)initWithServerURL:(NSURL *)serverURL mixpanel:(Mixpanel *)mixpanel {
+- (instancetype)initWithServerURL:(NSURL *)serverURL mixpanel:(Mixpanel *)mixpanel
+{
     self = [super init];
     if (self) {
         self.serverURL = serverURL;
@@ -45,7 +47,8 @@ static const NSUInteger kBatchSize = 50;
 }
 
 #pragma mark - Flush
-- (void)flushEventQueue:(NSMutableArray *)events {
+- (void)flushEventQueue:(NSMutableArray *)events
+{
     NSMutableArray *automaticEventsQueue;
     @synchronized (self.mixpanel) {
         automaticEventsQueue = [self orderAutomaticEvents:events];
@@ -58,7 +61,8 @@ static const NSUInteger kBatchSize = 50;
     }
 }
 
-- (NSMutableArray *)orderAutomaticEvents:(NSMutableArray *)events {
+- (NSMutableArray *)orderAutomaticEvents:(NSMutableArray *)events
+{
     if (!self.mixpanel.automaticEventsEnabled || !self.mixpanel.automaticEventsEnabled.boolValue) {
         NSMutableArray *discardedItems = [NSMutableArray array];
         for (NSDictionary *e in events) {
@@ -74,11 +78,13 @@ static const NSUInteger kBatchSize = 50;
     return nil;
 }
 
-- (void)flushPeopleQueue:(NSMutableArray *)people {
+- (void)flushPeopleQueue:(NSMutableArray *)people
+{
     [self flushQueue:people endpoint:MPNetworkEndpointEngage];
 }
 
-- (void)flushQueue:(NSMutableArray *)queue endpoint:(MPNetworkEndpoint)endpoint {
+- (void)flushQueue:(NSMutableArray *)queue endpoint:(MPNetworkEndpoint)endpoint
+{
     if ([self.mixpanel hasOptedOutTracking]) {
         return;
     }
@@ -149,7 +155,8 @@ static const NSUInteger kBatchSize = 50;
     }
 }
 
-- (BOOL)handleNetworkResponse:(NSHTTPURLResponse *)response withError:(NSError *)error {
+- (BOOL)handleNetworkResponse:(NSHTTPURLResponse *)response withError:(NSError *)error
+{
     MPLogDebug(@"HTTP Response: %@", response.allHeaderFields);
     MPLogDebug(@"HTTP Error: %@", error.localizedDescription);
     
@@ -181,7 +188,8 @@ static const NSUInteger kBatchSize = 50;
 #pragma mark - Helpers
 + (NSArray<NSURLQueryItem *> *)buildDecideQueryForProperties:(NSDictionary *)properties
                                               withDistinctID:(NSString *)distinctID
-                                                    andToken:(NSString *)token {
+                                                    andToken:(NSString *)token
+{
     NSURLQueryItem *itemVersion = [NSURLQueryItem queryItemWithName:@"version" value:@"1"];
     NSURLQueryItem *itemLib = [NSURLQueryItem queryItemWithName:@"lib" value:@"iphone"];
     NSURLQueryItem *itemToken = [NSURLQueryItem queryItemWithName:@"token" value:token];
@@ -198,7 +206,8 @@ static const NSUInteger kBatchSize = 50;
     return @[ itemVersion, itemLib, itemToken, itemDistinctID, itemProperties ];
 }
 
-+ (NSString *)pathForEndpoint:(MPNetworkEndpoint)endpoint {
++ (NSString *)pathForEndpoint:(MPNetworkEndpoint)endpoint
+{
     static NSDictionary *endPointToPath = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -211,7 +220,8 @@ static const NSUInteger kBatchSize = 50;
 }
 
 - (NSURLRequest *)buildGetRequestForEndpoint:(MPNetworkEndpoint)endpoint
-                              withQueryItems:(NSArray <NSURLQueryItem *> *)queryItems {
+                              withQueryItems:(NSArray <NSURLQueryItem *> *)queryItems
+{
     return [self buildRequestForEndpoint:[MPNetwork pathForEndpoint:endpoint]
                             byHTTPMethod:@"GET"
                           withQueryItems:queryItems
@@ -219,7 +229,8 @@ static const NSUInteger kBatchSize = 50;
 }
 
 - (NSURLRequest *)buildPostRequestForEndpoint:(MPNetworkEndpoint)endpoint
-                                      andBody:(NSString *)body {
+                                      andBody:(NSString *)body
+{
     return [self buildRequestForEndpoint:[MPNetwork pathForEndpoint:endpoint]
                             byHTTPMethod:@"POST"
                           withQueryItems:nil
