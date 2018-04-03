@@ -15,7 +15,18 @@
 }
 
 + (NSBundle *)frameworkBundle {
-    return [NSBundle bundleForClass:self.class];
+    NSBundle *bundle = nil;
+    NSURL *url = nil;
+    if ((bundle = [NSBundle bundleForClass:[Mixpanel class]]))
+        if ((url = [bundle URLForResource:@"Mixpanel" withExtension:@"bundle"]))
+            return [NSBundle bundleWithURL:url];
+    if ((bundle = [NSBundle bundleForClass:self.class]))
+        if ((url = [bundle URLForResource:@"Mixpanel" withExtension:@"bundle"]))
+            return [NSBundle bundleWithURL:url];
+    if ((bundle = [NSBundle mainBundle]))
+        if ((url = [bundle URLForResource:@"Mixpanel" withExtension:@"bundle"]))
+            return [NSBundle bundleWithURL:url];
+    return nil;
 }
 
 + (NSString *)notificationXibName {

@@ -298,21 +298,21 @@ static NSString *defaultProjectToken;
 - (NSString *)defaultDistinctId
 {    
     NSString *distinctId;
-#if defined(MIXPANEL_MACOS)
-    distinctId = [self macOSIdentifier];
-#else
-    distinctId = [self IFA];
-#endif
-
-#if !defined(MIXPANEL_WATCHOS) && !defined(MIXPANEL_MACOS)
-    if (!distinctId && NSClassFromString(@"UIDevice")) {
-        distinctId = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    }
-#endif
-    if (!distinctId) {
-        MPLogInfo(@"%@ error getting device identifier: falling back to uuid", self);
+//#if defined(MIXPANEL_MACOS)
+//    distinctId = [self macOSIdentifier];
+//#else
+//    distinctId = [self IFA];
+//#endif
+//
+//#if !defined(MIXPANEL_WATCHOS) && !defined(MIXPANEL_MACOS)
+//    if (!distinctId && NSClassFromString(@"UIDevice")) {
+//        distinctId = [[UIDevice currentDevice].identifierForVendor UUIDString];
+//    }
+//#endif
+//    if (!distinctId) {
+//        MPLogInfo(@"%@ error getting device identifier: falling back to uuid", self);
         distinctId = [[NSUUID UUID] UUIDString];
-    }
+//    }
     return distinctId;
 }
 
@@ -1709,15 +1709,18 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
 
 - (BOOL)showTakeoverNotificationWithObject:(MPTakeoverNotification *)notification
 {
+    if (![MPResources frameworkBundle]) return YES;
+
     UIViewController *presentingViewController = [Mixpanel topPresentedViewController];
 
     if ([[self class] canPresentFromViewController:presentingViewController]) {
+      @try {
         MPTakeoverNotificationViewController *controller = [[MPTakeoverNotificationViewController alloc] init];
         controller.notification = notification;
         controller.delegate = self;
         [controller show];
         self.notificationViewController = controller;
-
+      } @catch (NSException *e) {}
         return YES;
     } else {
         return NO;
@@ -1726,6 +1729,8 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
 
 - (BOOL)showMiniNotificationWithObject:(MPMiniNotification *)notification
 {
+    if (![MPResources frameworkBundle]) return YES;
+
     MPMiniNotificationViewController *controller = [[MPMiniNotificationViewController alloc] init];
     controller.notification = notification;
     controller.delegate = self;

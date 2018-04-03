@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
-   version = "1.3">
+   LastUpgradeVersion = "0830"
+   version = "1.8">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7C170C291A4A02F500D9E0F2"
-               BuildableName = "Mixpanel.framework"
-               BlueprintName = "Mixpanel"
+               BlueprintIdentifier = "D6DE12841F165920003A2F36"
+               BuildableName = "Mixpanel.bundle"
+               BlueprintName = "Mixpanel_Bundle"
                ReferencedContainer = "container:Mixpanel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -45,9 +46,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7C170C291A4A02F500D9E0F2"
-            BuildableName = "Mixpanel.framework"
-            BlueprintName = "Mixpanel"
+            BlueprintIdentifier = "D6DE12841F165920003A2F36"
+            BuildableName = "Mixpanel.bundle"
+            BlueprintName = "Mixpanel_Bundle"
             ReferencedContainer = "container:Mixpanel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7C170C291A4A02F500D9E0F2"
-            BuildableName = "Mixpanel.framework"
-            BlueprintName = "Mixpanel"
+            BlueprintIdentifier = "D6DE12841F165920003A2F36"
+            BuildableName = "Mixpanel.bundle"
+            BlueprintName = "Mixpanel_Bundle"
             ReferencedContainer = "container:Mixpanel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

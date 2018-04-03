@@ -19,19 +19,7 @@
 		513B0BBE1C73CBA4008EEE6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D411A4A059400D9E0F2 /* UIKit.framework */; };
 		514733BD1CD7CCDB0098B23A /* MPResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 514733BB1CD7CCDB0098B23A /* MPResources.h */; };
 		514733BE1CD7CCDB0098B23A /* MPResources.m in Sources */ = {isa = PBXBuildFile; fileRef = 514733BC1CD7CCDB0098B23A /* MPResources.m */; };
-		514733D21CD7D6EC0098B23A /* MPArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C71CD7D6EC0098B23A /* MPArrowLeft.png */; };
-		514733D31CD7D6EC0098B23A /* MPArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C81CD7D6EC0098B23A /* MPArrowLeft@2x.png */; };
-		514733D41CD7D6EC0098B23A /* MPArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C91CD7D6EC0098B23A /* MPArrowRight.png */; };
-		514733D51CD7D6EC0098B23A /* MPArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CA1CD7D6EC0098B23A /* MPArrowRight@2x.png */; };
-		514733D61CD7D6EC0098B23A /* MPCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CB1CD7D6EC0098B23A /* MPCheckmark.png */; };
-		514733D71CD7D6EC0098B23A /* MPCheckmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CC1CD7D6EC0098B23A /* MPCheckmark@2x.png */; };
-		514733D81CD7D6EC0098B23A /* MPCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CD1CD7D6EC0098B23A /* MPCloseButton.png */; };
-		514733D91CD7D6EC0098B23A /* MPCloseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CE1CD7D6EC0098B23A /* MPCloseButton@2x.png */; };
-		514733DA1CD7D6EC0098B23A /* MPCloseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CF1CD7D6EC0098B23A /* MPCloseButton@3x.png */; };
-		514733DB1CD7D6EC0098B23A /* MPDismissKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733D01CD7D6EC0098B23A /* MPDismissKeyboard.png */; };
-		514733DC1CD7D6EC0098B23A /* MPDismissKeyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733D11CD7D6EC0098B23A /* MPDismissKeyboard@2x.png */; };
 		515B5A0F1CB6FA9600A34060 /* MPTweak.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C170CA21A4A035F00D9E0F2 /* MPTweak.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		515B5A231CB6FF8600A34060 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 515B5A221CB6FF8600A34060 /* libicucore.tbd */; };
 		5177CFC71C5032B600271843 /* MixpanelExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5177CFC51C5032B600271843 /* MixpanelExceptionHandler.h */; };
 		5177CFC81C5032B600271843 /* MixpanelExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5177CFC61C5032B600271843 /* MixpanelExceptionHandler.m */; };
 		517ABB6B1D14AD6F00FF8061 /* MPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 517ABB691D14AD6F00FF8061 /* MPNetwork.m */; };
@@ -151,8 +139,6 @@
 		7C170D341A4A035F00D9E0F2 /* MPWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C170CB71A4A035F00D9E0F2 /* MPWebSocket.m */; };
 		7C170D371A4A035F00D9E0F2 /* NSInvocation+MPHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C170CBA1A4A035F00D9E0F2 /* NSInvocation+MPHelpers.h */; };
 		7C170D381A4A035F00D9E0F2 /* NSInvocation+MPHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C170CBB1A4A035F00D9E0F2 /* NSInvocation+MPHelpers.m */; };
-		7C170D391A4A035F00D9E0F2 /* snapshot_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C170CBC1A4A035F00D9E0F2 /* snapshot_config.json */; };
-		7C170D3A1A4A035F00D9E0F2 /* test_variant.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C170CBD1A4A035F00D9E0F2 /* test_variant.json */; };
 		7C170D3B1A4A035F00D9E0F2 /* UIColor+MPColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C170CBE1A4A035F00D9E0F2 /* UIColor+MPColor.h */; };
 		7C170D3C1A4A035F00D9E0F2 /* UIColor+MPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C170CBF1A4A035F00D9E0F2 /* UIColor+MPColor.m */; };
 		7C170D3D1A4A035F00D9E0F2 /* UIImage+MPAverageColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C170CC01A4A035F00D9E0F2 /* UIImage+MPAverageColor.h */; };
@@ -166,8 +152,24 @@
 		7C170D4A1A4A05AF00D9E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D491A4A05AF00D9E0F2 /* CoreTelephony.framework */; };
 		7C170D4C1A4A05B400D9E0F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4B1A4A05B400D9E0F2 /* CoreGraphics.framework */; };
 		7C170D4E1A4A05BE00D9E0F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4D1A4A05BE00D9E0F2 /* QuartzCore.framework */; };
-		E115E0151CCAEDFD0026CFC0 /* Mixpanel+AutomaticTracks.h in Headers */ = {isa = PBXBuildFile; fileRef = 51C3B2381CA5B2D3004CE37C /* Mixpanel+AutomaticTracks.h */; };
-		E115E0161CCAEE060026CFC0 /* AutomaticTracksConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 51C3B2391CA5B2D3004CE37C /* AutomaticTracksConstants.h */; };
+		D64F4DB41F21F435000CCBBF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6DE12871F165921003A2F36 /* Info.plist */; };
+		D6DE128B1F165A3A003A2F36 /* MPArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C71CD7D6EC0098B23A /* MPArrowLeft.png */; };
+		D6DE128C1F165A3A003A2F36 /* MPArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C81CD7D6EC0098B23A /* MPArrowLeft@2x.png */; };
+		D6DE128D1F165A3A003A2F36 /* MPArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C91CD7D6EC0098B23A /* MPArrowRight.png */; };
+		D6DE128E1F165A3A003A2F36 /* MPArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CA1CD7D6EC0098B23A /* MPArrowRight@2x.png */; };
+		D6DE128F1F165A3A003A2F36 /* MPCheckmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CB1CD7D6EC0098B23A /* MPCheckmark.png */; };
+		D6DE12901F165A3A003A2F36 /* MPCheckmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CC1CD7D6EC0098B23A /* MPCheckmark@2x.png */; };
+		D6DE12911F165A3A003A2F36 /* MPCloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CD1CD7D6EC0098B23A /* MPCloseButton.png */; };
+		D6DE12921F165A3A003A2F36 /* MPCloseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CE1CD7D6EC0098B23A /* MPCloseButton@2x.png */; };
+		D6DE12931F165A3A003A2F36 /* MPCloseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733CF1CD7D6EC0098B23A /* MPCloseButton@3x.png */; };
+		D6DE12941F165A3A003A2F36 /* MPDismissKeyboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733D01CD7D6EC0098B23A /* MPDismissKeyboard.png */; };
+		D6DE12951F165A3A003A2F36 /* MPDismissKeyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733D11CD7D6EC0098B23A /* MPDismissKeyboard@2x.png */; };
+		D6DE12961F165A3A003A2F36 /* placeholder-image.png in Resources */ = {isa = PBXBuildFile; fileRef = E19087C11E53B51200023FCC /* placeholder-image.png */; };
+		D6DE12971F165A43003A2F36 /* snapshot_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C170CBC1A4A035F00D9E0F2 /* snapshot_config.json */; };
+		D6DE12981F165A43003A2F36 /* test_variant.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C170CBD1A4A035F00D9E0F2 /* test_variant.json */; };
+		D6DE12991F165A5B003A2F36 /* MPTakeoverNotificationViewController~iphoneportrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B051E3A915C004F750B /* MPTakeoverNotificationViewController~iphoneportrait.xib */; };
+		D6DE129A1F165A5B003A2F36 /* MPTakeoverNotificationViewController~iphonelandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B061E3A915C004F750B /* MPTakeoverNotificationViewController~iphonelandscape.xib */; };
+		D6DE129B1F165A5B003A2F36 /* MPTakeoverNotificationViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B071E3A915C004F750B /* MPTakeoverNotificationViewController~ipad.xib */; };
 		E123C47F1D1342150015B425 /* MixpanelPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 519C548B1D131E6500407F56 /* MixpanelPeople.m */; };
 		E12CE4361EA68A3C0023AA2D /* AutomaticEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = E12CE4341EA68A3C0023AA2D /* AutomaticEvents.h */; };
 		E12CE4371EA68A3C0023AA2D /* AutomaticEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = E12CE4351EA68A3C0023AA2D /* AutomaticEvents.m */; };
@@ -175,7 +177,6 @@
 		E143ABBF1D51496800513BDE /* MPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 517ABB691D14AD6F00FF8061 /* MPNetwork.m */; };
 		E14FA8071F44DF17009B4533 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14FA8061F44DF17009B4533 /* UserNotifications.framework */; };
 		E163D08E1EA69B4500DA4BF6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E163D08D1EA69B4500DA4BF6 /* StoreKit.framework */; };
-		E19087C21E53B51200023FCC /* placeholder-image.png in Resources */ = {isa = PBXBuildFile; fileRef = E19087C11E53B51200023FCC /* placeholder-image.png */; };
 		E1C2BE261CFD6A010052172F /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C170C4C1A4A035F00D9E0F2 /* Mixpanel.m */; };
 		E1C2BE5C1CFD6A010052172F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D451A4A05A000D9E0F2 /* Foundation.framework */; };
 		E1C2BE5E1CFD6A010052172F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D411A4A059400D9E0F2 /* UIKit.framework */; };
@@ -221,9 +222,6 @@
 		F0FA7A6C1DB014B500AA8006 /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C170C4C1A4A035F00D9E0F2 /* Mixpanel.m */; };
 		F0FA7A711DB020E800AA8006 /* MPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 517ABB691D14AD6F00FF8061 /* MPNetwork.m */; };
 		F0FA7A731DB020FB00AA8006 /* MixpanelPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 519C548B1D131E6500407F56 /* MixpanelPeople.m */; };
-		F11A5B091E3A915C004F750B /* MPTakeoverNotificationViewController~iphoneportrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B051E3A915C004F750B /* MPTakeoverNotificationViewController~iphoneportrait.xib */; };
-		F11A5B0A1E3A915C004F750B /* MPTakeoverNotificationViewController~iphonelandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B061E3A915C004F750B /* MPTakeoverNotificationViewController~iphonelandscape.xib */; };
-		F11A5B0B1E3A915C004F750B /* MPTakeoverNotificationViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11A5B071E3A915C004F750B /* MPTakeoverNotificationViewController~ipad.xib */; };
 		F13874C41E38326400808C36 /* MPTakeoverNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = F13874C21E38326400808C36 /* MPTakeoverNotification.h */; };
 		F13874C51E38326400808C36 /* MPTakeoverNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F13874C31E38326400808C36 /* MPTakeoverNotification.m */; };
 		F13874C81E38327100808C36 /* MPMiniNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = F13874C61E38327100808C36 /* MPMiniNotification.h */; };
@@ -396,6 +394,8 @@
 		7C170D491A4A05AF00D9E0F2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7C170D4B1A4A05B400D9E0F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7C170D4D1A4A05BE00D9E0F2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D6DE12851F165920003A2F36 /* Mixpanel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mixpanel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DE12871F165921003A2F36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E12CE4341EA68A3C0023AA2D /* AutomaticEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticEvents.h; sourceTree = "<group>"; };
 		E12CE4351EA68A3C0023AA2D /* AutomaticEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomaticEvents.m; sourceTree = "<group>"; };
 		E12FA3B21D4C0F2B009DF414 /* MPAbstractABTestDesignerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAbstractABTestDesignerMessage.h; sourceTree = "<group>"; };
@@ -453,7 +453,6 @@
 			files = (
 				E14FA8071F44DF17009B4533 /* UserNotifications.framework in Frameworks */,
 				E163D08E1EA69B4500DA4BF6 /* StoreKit.framework in Frameworks */,
-				515B5A231CB6FF8600A34060 /* libicucore.tbd in Frameworks */,
 				519AD7A61CB706A9005411A5 /* CFNetwork.framework in Frameworks */,
 				519AD7A41CB706A6005411A5 /* Security.framework in Frameworks */,
 				7C170D4E1A4A05BE00D9E0F2 /* QuartzCore.framework in Frameworks */,
@@ -463,6 +462,13 @@
 				7C170D461A4A05A000D9E0F2 /* Foundation.framework in Frameworks */,
 				7C170D441A4A059800D9E0F2 /* Accelerate.framework in Frameworks */,
 				7C170D421A4A059400D9E0F2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DE12821F165920003A2F36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +779,7 @@
 				513B0BB61C73CA35008EEE6E /* MixpanelAppExtension.framework */,
 				E1C2BEB61CFD6A010052172F /* Mixpanel.framework */,
 				E1F160B01E677D2200391AE3 /* Mixpanel.framework */,
+				D6DE12851F165920003A2F36 /* Mixpanel.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -783,6 +790,7 @@
 				7C170C461A4A035F00D9E0F2 /* Source */,
 				7C170C2D1A4A02F500D9E0F2 /* Supporting Files */,
 				7C170D511A4A060300D9E0F2 /* Frameworks */,
+				D6DE12861F165921003A2F36 /* Bundle */,
 			);
 			name = Mixpanel;
 			sourceTree = "<group>";
@@ -852,6 +860,15 @@
 				7C170D411A4A059400D9E0F2 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6DE12861F165921003A2F36 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				D6DE12871F165921003A2F36 /* Info.plist */,
+			);
+			name = Bundle;
+			path = MixpanelBundle;
 			sourceTree = "<group>";
 		};
 		E12CE4331EA68A1E0023AA2D /* Automatic Events */ = {
@@ -1076,6 +1093,23 @@
 			productReference = 7C170C2A1A4A02F500D9E0F2 /* Mixpanel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D6DE12841F165920003A2F36 /* Mixpanel_Bundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6DE12881F165921003A2F36 /* Build configuration list for PBXNativeTarget "Mixpanel_Bundle" */;
+			buildPhases = (
+				D6DE12811F165920003A2F36 /* Sources */,
+				D6DE12821F165920003A2F36 /* Frameworks */,
+				D6DE12831F165920003A2F36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mixpanel_Bundle;
+			productName = MixpanelBundle;
+			productReference = D6DE12851F165920003A2F36 /* Mixpanel.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		E1C2BE0A1CFD6A010052172F /* Mixpanel_tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1C2BEB31CFD6A010052172F /* Build configuration list for PBXNativeTarget "Mixpanel_tvOS" */;
@@ -1147,6 +1181,7 @@
 				513B0B281C73CA35008EEE6E /* MixpanelAppExtension */,
 				E1C2BE0A1CFD6A010052172F /* Mixpanel_tvOS */,
 				E1F160AF1E677D2200391AE3 /* Mixpanel_macOS */,
+				D6DE12841F165920003A2F36 /* Mixpanel_Bundle */,
 			);
 		};
 /* End PBXProject section */
@@ -1163,23 +1198,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514733D31CD7D6EC0098B23A /* MPArrowLeft@2x.png in Resources */,
-				514733DB1CD7D6EC0098B23A /* MPDismissKeyboard.png in Resources */,
-				F11A5B0B1E3A915C004F750B /* MPTakeoverNotificationViewController~ipad.xib in Resources */,
-				E19087C21E53B51200023FCC /* placeholder-image.png in Resources */,
-				F11A5B091E3A915C004F750B /* MPTakeoverNotificationViewController~iphoneportrait.xib in Resources */,
-				514733D51CD7D6EC0098B23A /* MPArrowRight@2x.png in Resources */,
-				7C170D391A4A035F00D9E0F2 /* snapshot_config.json in Resources */,
-				514733D81CD7D6EC0098B23A /* MPCloseButton.png in Resources */,
-				514733D61CD7D6EC0098B23A /* MPCheckmark.png in Resources */,
-				7C170D3A1A4A035F00D9E0F2 /* test_variant.json in Resources */,
-				514733DA1CD7D6EC0098B23A /* MPCloseButton@3x.png in Resources */,
-				514733D91CD7D6EC0098B23A /* MPCloseButton@2x.png in Resources */,
-				514733DC1CD7D6EC0098B23A /* MPDismissKeyboard@2x.png in Resources */,
-				514733D41CD7D6EC0098B23A /* MPArrowRight.png in Resources */,
-				514733D21CD7D6EC0098B23A /* MPArrowLeft.png in Resources */,
-				514733D71CD7D6EC0098B23A /* MPCheckmark@2x.png in Resources */,
-				F11A5B0A1E3A915C004F750B /* MPTakeoverNotificationViewController~iphonelandscape.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DE12831F165920003A2F36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6DE12921F165A3A003A2F36 /* MPCloseButton@2x.png in Resources */,
+				D6DE12931F165A3A003A2F36 /* MPCloseButton@3x.png in Resources */,
+				D64F4DB41F21F435000CCBBF /* Info.plist in Resources */,
+				D6DE128C1F165A3A003A2F36 /* MPArrowLeft@2x.png in Resources */,
+				D6DE128F1F165A3A003A2F36 /* MPCheckmark.png in Resources */,
+				D6DE128D1F165A3A003A2F36 /* MPArrowRight.png in Resources */,
+				D6DE12981F165A43003A2F36 /* test_variant.json in Resources */,
+				D6DE129B1F165A5B003A2F36 /* MPTakeoverNotificationViewController~ipad.xib in Resources */,
+				D6DE12971F165A43003A2F36 /* snapshot_config.json in Resources */,
+				D6DE12911F165A3A003A2F36 /* MPCloseButton.png in Resources */,
+				D6DE12941F165A3A003A2F36 /* MPDismissKeyboard.png in Resources */,
+				D6DE129A1F165A5B003A2F36 /* MPTakeoverNotificationViewController~iphonelandscape.xib in Resources */,
+				D6DE12961F165A3A003A2F36 /* placeholder-image.png in Resources */,
+				D6DE12951F165A3A003A2F36 /* MPDismissKeyboard@2x.png in Resources */,
+				D6DE12991F165A5B003A2F36 /* MPTakeoverNotificationViewController~iphoneportrait.xib in Resources */,
+				D6DE12901F165A3A003A2F36 /* MPCheckmark@2x.png in Resources */,
+				D6DE128E1F165A3A003A2F36 /* MPArrowRight@2x.png in Resources */,
+				D6DE128B1F165A3A003A2F36 /* MPArrowLeft.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1298,6 +1341,13 @@
 				7C170CDB1A4A035F00D9E0F2 /* MPABTestDesignerDisconnectMessage.m in Sources */,
 				7C170CEC1A4A035F00D9E0F2 /* MPCGPointToNSDictionaryValueTransformer.m in Sources */,
 				51C3B23C1CA5B2D3004CE37C /* UIApplication+AutomaticTracks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6DE12811F165920003A2F36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1559,6 +1609,7 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -1566,13 +1617,17 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_DYLIB_INSTALL_NAME = "";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = Mixpanel/ios.modulemap;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"-licucore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mixpanel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -1581,19 +1636,45 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "";
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "@rpath";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_DYLIB_INSTALL_NAME = "";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = Mixpanel/ios.modulemap;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
+					"-licucore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mixpanel.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		D64843D51F21EF12009D6A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Mixpanel;
+			};
+			name = Debug;
+		};
+		D64843D61F21EF12009D6A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = Mixpanel;
 			};
 			name = Release;
 		};
@@ -1811,6 +1892,15 @@
 			buildConfigurations = (
 				7C170C411A4A02F500D9E0F2 /* Debug */,
 				7C170C421A4A02F500D9E0F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6DE12881F165921003A2F36 /* Build configuration list for PBXNativeTarget "Mixpanel_Bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D64843D51F21EF12009D6A4E /* Debug */,
+				D64843D61F21EF12009D6A4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
