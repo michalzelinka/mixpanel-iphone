@@ -106,6 +106,8 @@
 		
 		<option value="//api/name/sharedInstanceWithToken:launchOptions:">+ sharedInstanceWithToken:launchOptions:</option>
 		
+		<option value="//api/name/sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:">+ sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:</option>
+		
 	</optgroup>
 	
 
@@ -119,6 +121,8 @@
 		<option value="//api/name/clearTimedEvents">- clearTimedEvents</option>
 		
 		<option value="//api/name/createAlias:forDistinctID:">- createAlias:forDistinctID:</option>
+		
+		<option value="//api/name/createAlias:forDistinctID:usePeople:">- createAlias:forDistinctID:usePeople:</option>
 		
 		<option value="//api/name/currentSuperProperties">- currentSuperProperties</option>
 		
@@ -137,6 +141,8 @@
 		<option value="//api/name/initWithToken:launchOptions:andFlushInterval:">- initWithToken:launchOptions:andFlushInterval:</option>
 		
 		<option value="//api/name/initWithToken:launchOptions:flushInterval:trackCrashes:">- initWithToken:launchOptions:flushInterval:trackCrashes:</option>
+		
+		<option value="//api/name/initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:">- initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:</option>
 		
 		<option value="//api/name/joinExperiments">- joinExperiments</option>
 		
@@ -1196,6 +1202,83 @@ information created by push notifications.</p>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:" title="sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:">+&nbsp;sharedInstanceWithToken:launchOptions:trackCrashes:automaticPushTracking:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes a singleton instance of the API, uses it to track launchOptions information,
+and then returns it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (Mixpanel *)sharedInstanceWithToken:(NSString *)<em>apiToken</em> launchOptions:(NSDictionary *)<em>launchOptions</em> trackCrashes:(BOOL)<em>trackCrashes</em> automaticPushTracking:(BOOL)<em>automaticPushTracking</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>apiToken</code></th>
+						<td><p>your project token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>launchOptions</code></th>
+						<td><p>your application delegate&rsquo;s launchOptions</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>trackCrashes</code></th>
+						<td><p>whether or not to track crashes in Mixpanel. may want to disable if you&rsquo;re seeing
+issues with your crash reporting for either signals or exceptions</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>automaticPushTracking</code></th>
+						<td><p>whether or not to automatically track pushes sent from Mixpanel</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This is the preferred method for creating a <a href="#//api/name/sharedInstance">sharedInstance</a> with a mixpanel
+like above. With the launchOptions parameter, Mixpanel can track referral
+information created by push notifications.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Mixpanel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
 	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
 </h3>
@@ -1291,6 +1374,87 @@ it as a shared instance so you can use <code>sharedInstance</code> or
 						<th scope="row" class="argument-name"><code>trackCrashes</code></th>
 						<td><p>whether or not to track crashes in Mixpanel. may want to disable if you&rsquo;re seeing
                         issues with your crash reporting for either signals or exceptions</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Creates and initializes a new API object. See also <code>sharedInstanceWithToken:</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Mixpanel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:" title="initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:">&ndash;&nbsp;initWithToken:launchOptions:flushInterval:trackCrashes:automaticPushTracking:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes an instance of the API with the given project token. This also sets
+it as a shared instance so you can use <code>sharedInstance</code> or
+<code>sharedInstanceWithToken:</code> to retrieve this object later.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithToken:(NSString *)<em>apiToken</em> launchOptions:(nullable NSDictionary *)<em>launchOptions</em> flushInterval:(NSUInteger)<em>flushInterval</em> trackCrashes:(BOOL)<em>trackCrashes</em> automaticPushTracking:(BOOL)<em>automaticPushTracking</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>apiToken</code></th>
+						<td><p>your project token</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>launchOptions</code></th>
+						<td><p>optional app <a href="#//api/name/delegate">delegate</a> launchOptions</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>flushInterval</code></th>
+						<td><p>interval to run background flushing</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>trackCrashes</code></th>
+						<td><p>whether or not to track crashes in Mixpanel. may want to disable if you&rsquo;re seeing
+issues with your crash reporting for either signals or exceptions</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>automaticPushTracking</code></th>
+						<td><p>whether or not to automatically track pushes sent from Mixpanel</p></td>
 					</tr>
 				
 				</table>
@@ -2490,9 +2654,8 @@ though, for example, if you&rsquo;d like to track app crashes from main.m.</p>
 				<p>This method is used to map an identifier called an alias to the existing Mixpanel
 distinct id. This causes all events and people requests sent with the alias to be
 mapped back to the original distinct id. The recommended usage pattern is to call
-both createAlias: and identify: when the user signs up, and only identify: (with
-their new user ID) when they log in. This will keep your signup funnels working
-correctly.</p>
+createAlias: and then identify: (with their new user ID) when they log in the next time.
+This will keep your signup funnels working correctly.</p>
 
 <pre>
 // This makes the current ID (an auto-generated GUID)
@@ -2522,6 +2685,77 @@ correctly.</p>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/createAlias:forDistinctID:usePeople:" title="createAlias:forDistinctID:usePeople:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createAlias:forDistinctID:usePeople:">&ndash;&nbsp;createAlias:forDistinctID:usePeople:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a distinct_id <a href="#//api/name/alias">alias</a> from <a href="#//api/name/alias">alias</a> to original id.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createAlias:(NSString *)<em>alias</em> forDistinctID:(NSString *)<em>distinctID</em> usePeople:(BOOL)<em>usePeople</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>alias</code></th>
+						<td><p>the new distinct_id that should represent original</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>distinctID</code></th>
+						<td><p>the old distinct_id that <a href="#//api/name/alias">alias</a> will be mapped to</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>usePeople</code></th>
+						<td><p>bool controls whether or not to set the <a href="#//api/name/people">people</a> <a href="#//api/name/distinctId">distinctId</a> to the event <a href="#//api/name/distinctId">distinctId</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is not intended to be used unless you wish to prevent updating the Mixpanel
+People distinct ID value by passing a value of NO to the usePeople param. This can be
+useful if the user wishes to prevent People updates from being sent until the identify
+method is called.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Mixpanel.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/libVersion" title="libVersion"></a>
 	<h3 class="method-title"><code><a href="#//api/name/libVersion">&ndash;&nbsp;libVersion</a></code>
 </h3>
@@ -2533,7 +2767,7 @@ correctly.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns the Mixpanel library version number as a string, e.g. &ldquo;3.2.2&rdquo;.</p>
+				<p>Returns the Mixpanel library version number as a string, e.g. &ldquo;3.2.3&rdquo;.</p>
 			</div>
 			
 		    
@@ -2574,7 +2808,7 @@ correctly.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Returns the Mixpanel library version number as a string, e.g. &ldquo;3.2.2&rdquo;.</p>
+				<p>Returns the Mixpanel library version number as a string, e.g. &ldquo;3.2.3&rdquo;.</p>
 			</div>
 			
 		    
@@ -2931,7 +3165,7 @@ have been loaded and applied.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2017 Mixpanel. All rights reserved. Updated: 2017-10-11</p>
+						<p class="copyright">Copyright &copy; 2018 Mixpanel. All rights reserved. Updated: 2018-04-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
