@@ -13,8 +13,8 @@
 #import "MPLogger.h"
 #import "MPNetworkPrivate.h"
 
-#if !MIXPANEL_NO_NOTIFICATION_AB_TEST_SUPPORT
 #import <UserNotifications/UserNotifications.h>
+#if !MIXPANEL_NO_NOTIFICATION_AB_TEST_SUPPORT
 #import "NSThread+MPHelpers.h"
 #endif
 #if defined(MIXPANEL_WATCHOS)
@@ -28,7 +28,7 @@
 #error The Mixpanel library must be compiled with ARC enabled
 #endif
 
-#define VERSION @"3.3.3"
+#define VERSION @"3.3.4"
 
 NSString *const MPNotificationTypeMini = @"mini";
 NSString *const MPNotificationTypeTakeover = @"takeover";
@@ -1624,13 +1624,19 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
 {
     @synchronized (loggingLockObject) {
         gLoggingEnabled = enableLogging;
-
+        if (@available(iOS 10.0, macOS 10.12, *)) {
+            return;
+        }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        // Legacy logging, will be removed in future as long as we only support iOS 10+
         if (gLoggingEnabled) {
             asl_add_log_file(NULL, STDERR_FILENO);
             asl_set_filter(NULL, ASL_FILTER_MASK_UPTO(ASL_LEVEL_DEBUG));
         } else {
             asl_remove_log_file(NULL, STDERR_FILENO);
         }
+#pragma clang diagnostic pop
     }
 }
 
@@ -1723,6 +1729,7 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
                     return;
                 }
 
+#if !MIXPANEL_NO_AUTOMATIC_EVENTS_SUPPORT
                 NSDictionary *config = object[@"config"];
                 if (config && [config isKindOfClass:NSDictionary.class]) {
                     NSDictionary *validationConfig = config[@"ce"];
@@ -1737,6 +1744,7 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
                         }
                     }
                 }
+#endif
 
                 id rawNotifications = object[@"notifications"];
                 NSMutableArray *parsedNotifications = [NSMutableArray array];
