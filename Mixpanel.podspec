@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'Mixpanel'
-  s.version      = '3.3.4'
+  s.version      = '3.3.7'
   s.summary      = 'iPhone tracking library for Mixpanel Analytics'
   s.homepage     = 'https://mixpanel.com'
   s.license      = 'Apache License, Version 2.0'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.tvos.private_header_files = 'Mixpanel/MixpanelPrivate.h', 'Mixpanel/MixpanelPeoplePrivate.h', 'Mixpanel/MPNetworkPrivate.h', 'Mixpanel/SessionMetadata.h'
   s.tvos.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) MIXPANEL_TVOS'}
   s.tvos.frameworks = 'UIKit', 'Foundation'
-  s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = '3.0'
   s.watchos.source_files = 'Mixpanel/MixpanelWatchProperties.{m,h}', 'Mixpanel/Mixpanel.{m,h}', 'Mixpanel/MixpanelPrivate.h', 'Mixpanel/MixpanelPeople.{m,h}', 'Mixpanel/MixpanelPeoplePrivate.h', 'Mixpanel/MPNetwork.{m,h}', 'Mixpanel/MPNetworkPrivate.h', 'Mixpanel/MPLogger.h', 'Mixpanel/MPFoundation.h', 'Mixpanel/MixpanelExceptionHandler.{m,h}', 'Mixpanel/SessionMetadata.{m,h}'
   s.watchos.public_header_files = 'Mixpanel/Mixpanel.h', 'Mixpanel/MixpanelPeople.h'
   s.watchos.private_header_files = 'Mixpanel/MixpanelPrivate.h', 'Mixpanel/MixpanelPeoplePrivate.h', 'Mixpanel/MPNetworkPrivate.h', 'Mixpanel/SessionMetadata.h'
