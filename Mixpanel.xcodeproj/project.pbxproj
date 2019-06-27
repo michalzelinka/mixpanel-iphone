@@ -167,7 +167,6 @@
 		7C170D4A1A4A05AF00D9E0F2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D491A4A05AF00D9E0F2 /* CoreTelephony.framework */; };
 		7C170D4C1A4A05B400D9E0F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4B1A4A05B400D9E0F2 /* CoreGraphics.framework */; };
 		7C170D4E1A4A05BE00D9E0F2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C170D4D1A4A05BE00D9E0F2 /* QuartzCore.framework */; };
-		D64F4DB41F21F435000CCBBF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6DE12871F165921003A2F36 /* Info.plist */; };
 		D6DE128B1F165A3A003A2F36 /* MPArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C71CD7D6EC0098B23A /* MPArrowLeft.png */; };
 		D6DE128C1F165A3A003A2F36 /* MPArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C81CD7D6EC0098B23A /* MPArrowLeft@2x.png */; };
 		D6DE128D1F165A3A003A2F36 /* MPArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 514733C91CD7D6EC0098B23A /* MPArrowRight.png */; };
@@ -1225,7 +1224,6 @@
 			files = (
 				D6DE12921F165A3A003A2F36 /* MPCloseButton@2x.png in Resources */,
 				D6DE12931F165A3A003A2F36 /* MPCloseButton@3x.png in Resources */,
-				D64F4DB41F21F435000CCBBF /* Info.plist in Resources */,
 				D6DE128C1F165A3A003A2F36 /* MPArrowLeft@2x.png in Resources */,
 				D6DE128F1F165A3A003A2F36 /* MPCheckmark.png in Resources */,
 				D6DE128D1F165A3A003A2F36 /* MPArrowRight.png in Resources */,

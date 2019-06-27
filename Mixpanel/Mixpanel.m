@@ -31,7 +31,7 @@
 #error The Mixpanel library must be compiled with ARC enabled
 #endif
 
-#define VERSION @"3.4.5"
+#define VERSION @"3.4.7"
 
 NSString *const MPNotificationTypeMini = @"mini";
 NSString *const MPNotificationTypeTakeover = @"takeover";
@@ -406,7 +406,9 @@ static NSString *defaultProjectToken;
 - (NSString *)defaultDistinctId
 {
     NSString *distinctId;
-//#if defined(MIXPANEL_MACOS)
+//#if defined(MIXPANEL_RANDOM_DISTINCT_ID)
+//    distinctId = [[NSUUID UUID] UUIDString];
+//#elif defined(MIXPANEL_MACOS)
 //    distinctId = [self macOSIdentifier];
 //#else
 //    distinctId = [self IFA];
@@ -423,7 +425,6 @@ static NSString *defaultProjectToken;
 //    }
     return distinctId;
 }
-
 
 - (void)identify:(NSString *)distinctId
 {
@@ -450,9 +451,11 @@ static NSString *defaultProjectToken;
         // if it's new, blow away the alias as well.
         if (![distinctId isEqualToString:self.alias]) {
             if (![distinctId isEqualToString:self.distinctId]) {
+                NSString *oldDistinctId = [self.distinctId copy];
                 self.alias = nil;
                 self.distinctId = distinctId;
                 self.userId = distinctId;
+                [self track:@"$identify" properties:@{@"$anon_distinct_id": oldDistinctId}];
             }
             if (usePeople) {
                 self.people.distinctId = distinctId;
@@ -1397,30 +1400,6 @@ typedef NSDictionary*(^PropertyUpdate)(NSDictionary*);
         MPLogError(@"Failed fetch hw.machine from sysctl.");
     }
     return results;
-}
-
-- (NSString *)watchModel
-{
-    NSString *model = nil;
-    Class WKInterfaceDeviceClass = NSClassFromString(@"WKInterfaceDevice");
-    if (WKInterfaceDeviceClass) {
-        SEL currentDeviceSelector = NSSelectorFromString(@"currentDevice");
-        id device = ((id (*)(id, SEL))[WKInterfaceDeviceClass methodForSelector:currentDeviceSelector])(WKInterfaceDeviceClass, currentDeviceSelector);
-        SEL screenBoundsSelector = NSSelectorFromString(@"screenBounds");
-        if (device && [device respondsToSelector:screenBoundsSelector]) {
-            NSInvocation *screenBoundsInvocation = [NSInvocation invocationWithMethodSignature:[device methodSignatureForSelector:screenBoundsSelector]];
-            [screenBoundsInvocation setSelector:screenBoundsSelector];
-            [screenBoundsInvocation invokeWithTarget:device];
-            CGRect screenBounds;
-            [screenBoundsInvocation getReturnValue:(void *)&screenBounds];
-            if (screenBounds.size.width == 136.0f) {
-                model = @"Apple Watch 38mm";
-            } else if (screenBounds.size.width == 156.0f) {
-                model = @"Apple Watch 42mm";
-            }
-        }
-    }
-    return model;
 }
 
 - (NSString *)IFA
