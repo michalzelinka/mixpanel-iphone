@@ -31,7 +31,7 @@
 #error The Mixpanel library must be compiled with ARC enabled
 #endif
 
-#define VERSION @"3.4.8"
+#define VERSION @"3.5.0"
 
 NSString *const MPNotificationTypeMini = @"mini";
 NSString *const MPNotificationTypeTakeover = @"takeover";
@@ -2080,6 +2080,10 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
             }
         } else {
             NSArray *unseenNotifications = [self.notifications objectsAtIndexes:[self.notifications indexesOfObjectsPassingTest:^BOOL(MPNotification *obj, NSUInteger idx, BOOL *stop) {
+                return [self.shownNotifications member:@(obj.ID)] == nil;
+            }]];
+            
+            self.triggeredNotifications = [self.triggeredNotifications objectsAtIndexes:[self.triggeredNotifications indexesOfObjectsPassingTest:^BOOL(MPNotification *obj, NSUInteger idx, BOOL *stop) {
                 return [self.shownNotifications member:@(obj.ID)] == nil;
             }]];
 
